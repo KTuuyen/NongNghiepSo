@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Giỏ hàng</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .product { display: flex; align-items: center; margin-bottom: 10px; }
+    .product img { width: 40px; margin-right: 10px; }
+    .product span { margin-right: 10px; }
+    .quantity { width: 40px; }
+    .remove-btn { background: red; color: white; border: none; cursor: pointer; padding: 2px 6px; }
+    .checkout-button { margin-top: 20px; padding: 10px; background: green; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <h2>Giỏ hàng của bạn</h2>
+  <div id="cart"></div>
+  <p><strong>Tổng tiền: <span id="total">0</span> VNĐ</strong></p>
+  <button onclick="goToCheckout()" class="checkout-button">Tiến hành thanh toán</button>
+
+  <script>
+    function formatCurrency(num) {
+      return parseInt(num).toLocaleString('vi-VN');
+    }
+
+    // Thêm sản phẩm mẫu vào giỏ hàng khi không có dữ liệu
+    function initCart() {
+      let cart = JSON.parse(localStorage.getItem('cart_items')) || [];
+      if (cart.length === 0) {
+        // Thêm sản phẩm mẫu nếu giỏ hàng trống
+        cart.push({
+          name: "ỚT CHUÔNG XANH",
+          price: 70000,
+          quantity: 5
+        });
+          cart.push({
+          name: "ỚT CHUÔNG TÍM",
+          price: 70000,
+          quantity: 5
+        });
+        localStorage.setItem('cart_items', JSON.stringify(cart));
+      }
+    }
+
+    function renderCart() {
+      const cartContainer = document.getElementById('cart');
+      const items = JSON.parse(localStorage.getItem('cart_items')) || [];
+      let total = 0;
+      cartContainer.innerHTML = '';
+
+      items.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        div.innerHTML = `
+          <img src="../anh/${item.name.includes("XANH") ? "otchuongxanh.jpg" : "otchuongdo.jpg"}" />
+          <span>${item.name}</span>
+          <span>Đơn giá: ${formatCurrency(item.price)}đ</span>
+          <input type="number" class="quantity" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)" />
+          <span>= ${formatCurrency(subtotal)}đ</span>
+          <button class="remove-btn" onclick="removeItem(${index})">X</button>
+        `;
+        cartContainer.appendChild(div);
+      });
+
+      document.getElementById('total').innerText = formatCurrency(total);
+      localStorage.setItem('cart_total', total);
+    }
+
+    function updateQuantity(index, newQty) {
+      let items = JSON.parse(localStorage.getItem('cart_items')) || [];
+      items[index].quantity = parseInt(newQty);
+      localStorage.setItem('cart_items', JSON.stringify(items));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      let items = JSON.parse(localStorage.getItem('cart_items')) || [];
+      items.splice(index, 1);
+      localStorage.setItem('cart_items', JSON.stringify(items));
+      renderCart();
+    }
+
+    function goToCheckout() {
+      window.location.href = "thanhtoan.html";
+    }
+
+    window.onload = function() {
+      initCart();
+      renderCart();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Căn đều 2 bên */
+  background-color: #333;
+  color: white;
+  padding: 5px 300px;
+  font-size: 14px;
+  align-items: center; /* Căn dọc */
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.left-content a,
+.right-content a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.left-content a:hover,
+.right-content a:hover {
+  color: #00c853; /* Hiệu ứng hover */
+}
+
+.header {
+  background-color: white; /* Màu nền trắng */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 280px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+.user-options img {
+  width: 25px;
+  height: 20px;
+}
+
+.user-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-options a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-options .icon-heart::before,
+.user-options .icon-cart::before {
+  font-size: 20px;
+  color: black;
+}
+
+.user-options .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #00c853;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.menu {
+  display: flex;
+  justify-content: left;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding-left: 250px;
+  background-color: #333;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 25px 30px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00c853;
+}
+
+.home {
+  display: flex;
+  justify-content: left;
+  height: 126px;
+  padding-left: 270px;
+  background-image: url("anh/nenthanhhome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 63px 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.home a:hover {
+  color: #00c853;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  background-color: #d4edda;
+  border: 1px solid #ccc;
+  padding: 0px 2px;
+  list-style-type: none;
+  z-index: 1000;
+  min-width: 100px;
+  border-radius: 10px;
+}
+.dropdown-menu li {
+  white-space: pre-wrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #c8e6c9;
+  border-radius: 10px;
+}
+
+.dropdown-menu li a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hiển thị menu khi rê chuột */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: block;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #333;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container table {
+  justify-self: center;
+}
+
+.cart {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+.cart th,
+.cart td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cart tr {
+  border-left: #666 solid 1px;
+  border-top: #666 solid 1px;
+  border-right: #666 solid 1px;
+  border-radius: 30%;
+}
+
+.cart td {
+  border-bottom: #666 solid 1px;
+  border-top: #666 solid 1px;
+}
+
+.product-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.green-btn {
+  background-color: #00cc66;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding-left: 470px;
+}
+
+.voucher-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 50px;
+}
+.enter-text,
+.arrow {
+  color: rgba(134, 190, 136, 1);
+}
+
+.voucher {
+  display: flex;
+  align-items: center;
+  background-color: #f0faef;
+  padding: 10px 20px;
+  border-radius: 10px;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  width: 30%;
+}
+.voo {
+  display: flex;
+  margin-right: 15%;
+  text-align: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.voucher img {
+  align-items: center;
+  margin-right: 20px;
+  width: 30%;
+  object-fit: contain;
+}
+
+.total-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 70px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.pay-btn {
+  background-color: #00cc66;
+  color: white;
+  border: none;
+  padding: 10px 70px;
+  font-weight: bold;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.quantity-box {
+  border-radius: 8px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+.qty-number {
+  color: green;
+  font-weight: 500;
+  font-size: 14px;
+  min-width: 12px;
+  text-align: center;
+}

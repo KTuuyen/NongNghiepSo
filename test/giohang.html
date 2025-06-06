@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .product { display: flex; align-items: center; margin-bottom: 10px; }
+    .product img { width: 60px; margin-right: 10px; }
+    .product input { width: 50px; margin-left: 10px; }
+    .btn { padding: 8px 12px; background: #28a745; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Giỏ hàng</h2>
+
+  <div class="product">
+    <img src="../anh/otchuongxanh.jpg" alt="Ớt xanh" />
+    <span>ỚT CHUÔNG XANH</span>
+    <span style="margin-left:auto">Đơn giá: <span class="price">14000</span> VNĐ</span>
+    <input type="number" class="quantity" value="5" min="1" />
+  </div>
+
+  <div class="product">
+    <img src="../anh/otchuongdo.jpg" alt="Ớt đỏ" />
+    <span>ỚT CHUÔNG ĐỎ</span>
+    <span style="margin-left:auto">Đơn giá: <span class="price">14000</span> VNĐ</span>
+    <input type="number" class="quantity" value="1" min="1" />
+  </div>
+
+  <hr>
+  <p>Tổng tiền: <strong id="total">0</strong> VNĐ</p>
+  <button class="btn" onclick="checkout()">Thanh toán</button>
+
+  <script>
+    function formatCurrency(num) {
+      return num.toLocaleString('vi-VN');
+    }
+
+    function calculateTotal() {
+      const prices = document.querySelectorAll('.price');
+      const quantities = document.querySelectorAll('.quantity');
+      let total = 0;
+
+      for (let i = 0; i < prices.length; i++) {
+        total += parseFloat(prices[i].innerText) * parseInt(quantities[i].value);
+      }
+
+      document.getElementById('total').innerText = formatCurrency(total);
+      return total;
+    }
+
+    function checkout() {
+      const products = document.querySelectorAll('.product');
+      let cart = [];
+
+      products.forEach((product, index) => {
+        const name = product.querySelector('span').innerText;
+        const price = parseInt(product.querySelector('.price').innerText);
+        const quantity = parseInt(product.querySelector('.quantity').value);
+        cart.push({ name, price, quantity });
+      });
+
+      const total = calculateTotal();
+
+      localStorage.setItem("cart_items", JSON.stringify(cart));
+      localStorage.setItem("cart_total", total);
+
+    //   window.location.href = "thanhtoan.html";
+      
+      window.location.href = "../index/ThanhToan.html";
+    }
+
+    // Tự động tính khi trang mở
+    window.onload = () => {
+      const inputs = document.querySelectorAll('.quantity');
+      inputs.forEach(input => input.addEventListener('input', calculateTotal));
+      calculateTotal();
+    };
+  </script>
+</body>
+</html>

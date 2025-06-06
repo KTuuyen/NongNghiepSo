@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Đơn Hàng - Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/NguoiBan/css/style_QuanLyDonHang.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div><img src="/anh/MapPin.png" style="width: 15px; height: 18px; margin-right: 5px;"> CHỌN ĐỊA ĐIỂM GẦN BẠN</div>
+                    <div>
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/vn.svg" style="width: 16px; height: 12px; margin-right: 5px;"> VIE 
+                        <svg width="12" height="12" style="margin-left: 5px;" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10L12 15L17 10H7Z"/></svg>
+                         CHÍNH SÁCH 
+                        <svg width="12" height="12" style="margin-left: 5px;" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10L12 15L17 10H7Z"/></svg>
+                        |<a href="/index/DangKy.html"> ĐĂNG KÝ</a> / <a href="/index/DangNhap.html">ĐĂNG NHẬP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo"><a href="/index/TrangChu.html"><img src="/anh/logo.png" alt="">NÔNG NGHIỆP SỐ</a></div>
+                    
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    
+                    <div class="cart-info">
+                        <a href="#" class="cart-item"><img src="/anh/Heart2.png" alt="">
+                        </a> | <a href="#" class="cart-item"><img src="/anh/Bag.png" alt="">
+                            <span class="cart-badge">2</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <ul class="menu">
+                <li><a href="#" class="nav-item">TRANG CHỦ</a></li> 
+                <li><a href="#" class="nav-item">SẢN PHẨM</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">MENU <img src="/anh/ChevronDown1.png" alt=""></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Trái cây</a></li>
+                        <li><a href="#">Rau củ</a></li>
+                        <li><a href="#">Gạo</a></li>
+                        <li><a href="#">Nông sản khô</a></li>
+                        <li><a href="#">Hải sản</a></li>
+                        <li><a href="#">Đồ uống</a></li>
+                        <li><a href="#">Mật ong</a></li>
+                        <li><a href="#">Gia vị</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-item">TIN TỨC & SỰ KIỆN</a></li>
+                
+            </ul>
+            <div class="navbar-icons">
+                <i><img src="/anh/PhoneCall2.png" alt=""></i>
+                <span>123456789</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <div class="breadcrumb-nav">
+                <a href="#"><i class="fas fa-home"></i></a>
+                <span>></span>
+                <a href="#">TRANG CHỦ</a>
+                <span>></span>
+                <span style="color: #4CAF50;">QUẢN LÝ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quản Lý Đơn Hàng</div>
+                <ul class="sidebar-menu">
+                    <li class="active">Tất cả</li>
+                    <li>Bàn giao đơn hàng</li>
+                    <li>Cài đặt vận chuyển</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quản Lý Sản Phẩm</div>
+                <ul class="sidebar-menu">
+                    <li>Sản phẩm</li>
+                    <li>Thêm sản phẩm</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quản Lý Chăm Sóc KH</div>
+                <ul class="sidebar-menu">
+                    <li>Chat</li>
+                    <li>Đánh giá</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quản Lý Tài Chính</div>
+                <ul class="sidebar-menu">
+                    <li>Doanh thu</li>
+                    <li>Số dư trong CNS</li>
+                    <li>Tài khoản ngân hàng</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <h2 class="content-title">Tất cả</h2>
+
+            <div class="filter-section">
+                <!-- Tab Buttons -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active">Tất cả</button>
+                    <button class="tab-btn">Chờ xác nhận</button>
+                    <button class="tab-btn">Chờ giao hàng</button>
+                    <button class="tab-btn">Đã giao</button>
+                    <button class="tab-btn">Hủy đơn/Trả hàng</button>
+                </div>
+
+                <!-- Filter Rows -->
+                <div class="filter-row">
+                    <div class="filter-label">Trạng thái đơn hàng</div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">Chưa xử lý</button>
+                        <button class="filter-btn">Đã xử lý</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <div class="filter-label">Hạn giao</div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">Đã quá hạn</button>
+                        <button class="filter-btn">Hạn hôm nay</button>
+                        <button class="filter-btn">Hạn ngày mai</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <div class="filter-label">Mã đơn hàng</div>
+                    <input type="text" class="form-input" placeholder="Nhập mã đơn hàng">
+                </div>
+
+                <div class="filter-row">
+                    <div class="filter-label">Đơn vị vận chuyển</div>
+                    <select class="form-select">
+                        <option>Chọn đơn vị vận chuyển</option>
+                    </select>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <div class="btn-group">
+                        <button class="btn btn-primary">XUẤT</button>
+                        <button class="btn btn-primary">LỊCH SỬ XUẤT</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-outline">Đặt lại</button>
+                        <button class="btn btn-primary">Áp đặt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="/index/TrangChu.html">
+                        <img src="/anh/logo.png" alt="">
+                        NÔNG NGHIỆP SỐ
+                    </a>
+                </div>
+                <p>CHUYÊN CUNG CẤP RAU CỦ - TRÁI CÂY - THỊT TƯƠI <br> ĐƯỢC PHÁT TRIỂN VÀ TẠO: NÔNG NGHIỆP SỐ</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>TÀI KHOẢN</h3>
+                <p><strong>EMAIL:</strong><br>hello2345@gmail.com</p>
+                <p><strong>HOTLINE:</strong><br>123456789</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HỖ TRỢ</h3>
+                <p><a href="#">LIÊN HỆ</a></p>
+                <p><a href="#">CÂU HỎI THƯỜNG GẶP</a></p>
+                <p><a href="#">ĐIỀU KHOẢN & QUY ĐỊNH</a></p>
+                <p><a href="#">CHÍNH SÁCH BẢO MẬT</a></p>
+            </div>
+        
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Filter button functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Sidebar menu functionality
+        document.querySelectorAll('.sidebar-menu li').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.querySelectorAll('li').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

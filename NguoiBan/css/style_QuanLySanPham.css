@@ -1,0 +1,529 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Căn đều 2 bên */
+  background-color: #333;
+  color: white;
+  padding: 5px 300px;
+  font-size: 14px;
+  align-items: center; /* Căn dọc */
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.left-content a,
+.right-content a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.left-content a:hover,
+.right-content a:hover {
+  color: #00c853; /* Hiệu ứng hover */
+}
+
+.header {
+  background-color: white; /* Màu nền trắng */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 280px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar {
+  width: 300px; /* Tăng độ rộng ô tìm kiếm */
+  padding: 10px;
+  margin-top: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Bo tròn các góc */
+}
+
+.search-button {
+  background-color: #00c853; /* Màu xanh nổi bật */
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 0 5px 5px 0; /* Bo tròn góc phải */
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.user-options img {
+  width: 25px;
+  height: 20px;
+}
+
+.user-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-options a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-options .icon-heart::before,
+.user-options .icon-cart::before {
+  font-size: 20px;
+  color: black;
+}
+
+.user-options .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #00c853;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.menu {
+  display: flex;
+  justify-content: left;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding-left: 250px;
+  background-color: #333;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 25px 30px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00c853;
+}
+
+.home {
+  display: flex;
+  justify-content: left;
+  height: 126px;
+  padding-left: 270px;
+  background-image: url("../anh/nenthanhhome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 63px 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.home a:hover {
+  color: #00c853;
+}
+
+.tk {
+  padding-top: 25px;
+  padding-left: 100px;
+}
+
+.ht {
+  padding-top: 25px;
+  padding-left: 100px;
+}
+
+.footer .footer-content img {
+  align-items: center;
+}
+
+.footer .footer-content h4 {
+  color: #ffffff;
+}
+
+.footer .footer-content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footerleft a {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.footerleft {
+  padding-top: 90px;
+  flex-direction: column;
+}
+.footer {
+  background-color: #333;
+  color: #ccc;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  padding-left: 190px;
+}
+
+.footer-links p {
+  margin: 5px 0;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: block;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #333;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  background-color: #d4edda;
+  border: 1px solid #ccc;
+  padding: 0px 2px;
+  list-style-type: none;
+  z-index: 1000;
+  min-width: 100px;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  white-space: pre-wrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #c8e6c9;
+  border-radius: 10px;
+}
+
+.dropdown-menu li a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hiển thị menu khi rê chuột */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.order-filter-container {
+  max-width: 800px;
+  background: #f1f9f1;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.title {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-buttons button {
+  padding: 8px 12px;
+  border: 1px solid #4caf50;
+  background: white;
+  color: #4caf50;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background: #4caf50;
+  color: white;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-row label {
+  min-width: 160px;
+  font-weight: 500;
+}
+
+.btn-group button {
+  margin-right: 10px;
+  padding: 6px 10px;
+  background: white;
+  border: 1px solid #4caf50;
+  color: #4caf50;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="text"],
+select {
+  border: 1px solid #4caf50;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-green {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: white;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.product-container {
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+  max-width: 900px;
+}
+
+.title {
+  color: #7fcf89;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: #4caf50;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.media-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.media-box {
+  display: flex;
+  flex: 1;
+  border: 1px solid #d4edda;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+  gap: 140px;
+}
+
+.media-box label {
+  align-content: center;
+}
+
+.upload-placeholder {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #5cb85c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-rw {
+  width: 400px;
+}
+
+.form-row {
+  display: flex;
+  gap: 270px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-rw {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.cancel,
+.save {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save {
+  background-color: #4caf50;
+  color: white;
+}
+
+.noidung {
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+}
+
+.sidebar {
+  flex: 1;
+  border: 1px solid #d4edda;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 20px;
+  padding-right: 150px;
+  padding-bottom: 80px;
+}
+
+.sidebar ul {
+  list-style: none;
+}

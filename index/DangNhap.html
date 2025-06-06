@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style_DangNhap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <title>Đăng Nhập - Nông Nghiệp Số</title>
+  </head>
+  
+
+  <body>
+    <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://web.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <span class="welcome-text">Welcome to NÔNG NGHIỆP SỐ</span>
+  </div>
+    <div class="container">
+      <div class="login-box">
+        <header class="header">
+          <div class="menu">
+            <div class="logo">
+              <a href="#">
+                <img src="../anh/logo.png" alt="logo" width="30" />
+                <div class="name_logo">NÔNG NGHIỆP SỐ</div>
+              </a>
+            </div>
+            <nav>
+              <div class="menu">
+                <a href="TrangChu.html" class="home">TRANG CHỦ</a>
+                <a href="#" class="home">TIN TỨC</a>
+                <a href="GioiThieu.html" class="home">GIỚI THIỆU</a>
+                <li class="dropdown">
+                    <a href="#" class="home">SẢN PHẨM</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Giao hàng</a></li>
+                      <li><a href="#">Hỗ trợ kỹ thuật</a></li>
+                      <li><a href="#">Tư vấn nông nghiệp</a></li>
+                    </ul>
+                  </li>
+              </div>
+            </nav>
+            <div class="menu-icons">
+              <div class="menu-search">
+                 <i><img src="../anh/searchnormal1.png" alt=""></i>
+                <input
+                  type="text"
+                  class="menu-search-input"
+                  placeholder="Tìm kiếm..."
+                />
+              </div>
+              <div class="menu-cart">
+                <a href="#">
+                   <i><img src="../anh/shoppingcart.png" alt=""></i>
+                </a>
+              </div>
+
+              <div class="hotline">
+                 <i><img src="../anh/call.png" alt=""></i>
+                <div class="hotline-text">
+                  <span>HOTLINE</span>
+                  <strong>0123456789</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="container">
+            <div class="login-section">
+              <br />
+              <h1>CHÀO MỪNG BẠN TRỞ LẠI!</h1>
+              <p>NHẬP THÔNG TIN XÁC THỰC ĐỂ TRUY CẬP TÀI KHOẢN</p>
+              <form>
+                <!-- <div class="ten">
+                  <label for="ten">Tên</label>
+                </div>
+                <input
+                  type="text"
+                  id="ten"
+                  placeholder="Nhập tên đăng nhập..."
+                  required
+                />
+                <div class="SDT">
+                  <label for="SDT">SĐT</label>
+                </div>
+                <input
+                  type="tel"
+                  id="SDT"
+                  placeholder="Nhập sđt của bạn..."
+                  required
+                /> -->
+                <div class="email">
+                  <label for="email">Địa chỉ email</label>
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Nhập email..."
+                  required
+                />
+
+                <div class="password-container">
+                  <label for="password">Mật khẩu</label>
+                  <a href="#">Quên mật khẩu</a>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Nhập mật khẩu..."
+                  required
+                />
+
+                <div class="options">
+                  <label><input type="checkbox" />Nhớ đăng nhập</label>
+                </div>
+
+                <button type="button" onclick="submitForm()" class="round-button">OKAY !!!!</button>
+                <div id="result" style="color: red; margin-top: 10px;"></div>
+              </form>
+              <div class="social-login">
+                <button class="google">
+                  <img src="../anh/icoon-google.png" alt="Google" width="24" />
+                  Đăng nhập với Google
+                </button>
+                <button class="apple">
+                  <img src="../anh/icoonapple.png" alt="Apple" width="34" />
+                  Đăng nhập với Apple
+                </button>
+              </div>
+              <p class="signup">
+                Don't have an account? <a href="DangKy.html">Sign Up</a>
+              </p>
+            </div>
+
+            <div class="info-section">
+              <br />
+              <h1>NHANH CHÓNG - AN TOÀN - CHẤT LƯỢNG</h1>
+              <img src="../anh/freshvegatable.png" alt="Hình ảnh minh họa" />
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script>
+    function submitForm() {
+      // const name = document.getElementById('name').value;
+      // const sdt = document.getElementById('sdt').value;
+      const email = document.getElementById('email').value;
+      const mk = document.getElementById('password').value;
+      // const mk2 = document.getElementById('nhaplaimk').value;
+      
+      fetch('../XuLy_php/dangnhap.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          // tendk: name,
+          // sdtdk: sdt,
+          emaildk: email,
+          mkdk: mk,
+          // nhaplaimkdk: mk2
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const resultEl = document.getElementById('result');
+        console.log('Phản hồi JSON:', data); 
+        if (data.status === 'success') {
+          resultEl.style.color = 'green';
+          resultEl.innerText = '🎉 Đăng nhập thành công!';
+          setTimeout(() => {
+            window.location.href = 'TrangChu.html'; // Chuyển hướng nếu cần
+          }, 1000);
+        } else {
+          resultEl.style.color = 'red';
+          resultEl.innerText = '❌ ' + data.message;
+        }
+      })
+      .catch(err => {
+        document.getElementById('result').innerText = 'Lỗi kết nối: ' + err;
+      });
+    }
+  </script>
+</html>

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thanh toán</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .boxbill { max-width: 600px; border: 1px solid #ccc; padding: 20px; }
+    .cart-summary img { width: 40px; vertical-align: middle; margin-right: 5px; }
+    .cart-summary ul { list-style: none; padding-left: 0; }
+    .cart-summary li { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .checkout-button { padding: 10px; background: green; color: white; border: none; cursor: pointer; margin-top: 10px; }
+    .payment-method label { display: block; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div class="boxbill">
+    <aside class="cart-summary">
+      <h3>GIỎ HÀNG CỦA BẠN</h3>
+      <ul id="cart-list"></ul>
+      <p>TỔNG TIỀN: <strong id="subtotal">0</strong> VNĐ</p>
+      <hr />
+      <p>PHÍ SHIP: <strong>Free</strong></p>
+      <hr />
+      <p>TỔNG ĐƠN HÀNG: <strong id="grandtotal">0</strong> VNĐ</p>
+
+      <h4>HÌNH THỨC THANH TOÁN</h4>
+      <div class="payment-method">
+        <label><input type="radio" name="payment" /> CHUYỂN KHOẢN NGÂN HÀNG</label>
+        <label><input type="radio" name="payment" /> MOMO</label>
+        <label><input type="radio" name="payment" /> TIỀN MẶT</label>
+      </div>
+      <button onclick="thanhtoan()" class="checkout-button">THANH TOÁN</button>
+      <p id="result" style="color:red;"></p>
+    </aside>
+  </div>
+
+  <script>
+    function formatCurrency(num) {
+      return parseInt(num).toLocaleString('vi-VN');
+    }
+
+    function renderCart() {
+      const cartList = document.getElementById('cart-list');
+      const items = JSON.parse(localStorage.getItem('cart_items')) || [];
+      let total = 0;
+      cartList.innerHTML = '';
+
+      items.forEach((item) => {
+        const li = document.createElement('li');
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        li.innerHTML = `
+          <span>
+            <img src="../anh/${item.name.includes("XANH") ? "otchuongxanh.jpg" : "otchuongdo.jpg"}" />
+            ${item.name} x${item.quantity}
+          </span>
+          <span>${formatCurrency(itemTotal)}đ</span>
+        `;
+        cartList.appendChild(li);
+      });
+
+      document.getElementById('subtotal').innerText = formatCurrency(total);
+      document.getElementById('grandtotal').innerText = formatCurrency(total);
+    }
+
+    function thanhtoan() {
+      const payments = document.getElementsByName("payment");
+      let selected = null;
+      for (let p of payments) {
+        if (p.checked) {
+          selected = p.nextSibling.textContent.trim();
+          break;
+        }
+      }
+
+      if (!selected) {
+        document.getElementById("result").innerText = "Vui lòng chọn hình thức thanh toán!";
+        return;
+      }
+
+      if ((JSON.parse(localStorage.getItem('cart_items')) || []).length === 0) {
+        document.getElementById("result").innerText = "Giỏ hàng đang trống!";
+        return;
+      }
+
+      document.getElementById("result").style.color = "green";
+      document.getElementById("result").innerText = "Đặt hàng thành công với phương thức: " + selected;
+
+      // Xóa giỏ hàng
+      localStorage.removeItem("cart_items");
+      localStorage.removeItem("cart_total");
+    }
+
+    window.onload = renderCart;
+  </script>
+</body>
+</html>

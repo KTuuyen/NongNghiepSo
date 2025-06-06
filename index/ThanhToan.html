@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="/css/style_ThanhToan.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div><img src="../anh/MapPin.png" style="width: 15px; height: 18px; margin-right: 5px;"> CHỌN ĐỊA ĐIỂM GẦN BẠN</div>
+                    <div>
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/vn.svg" style="width: 16px; height: 12px; margin-right: 5px;"> VIE 
+                        <svg width="12" height="12" style="margin-left: 5px;" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10L12 15L17 10H7Z"/></svg>
+                         CHÍNH SÁCH 
+                        <svg width="12" height="12" style="margin-left: 5px;" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10L12 15L17 10H7Z"/></svg>
+                        |<a href="../index/DangKy.html"> ĐĂNG KÝ</a> / <a href="../index/DangNhap.html">ĐĂNG NHẬP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo"><a href="../index/TrangChu.html"><img src="../anh/logo.png" alt="">NÔNG NGHIỆP SỐ</a></div>
+                    
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    
+                    <div class="cart-info">
+                        <a href="#" class="cart-item"><img src="../anh/Heart2.png" alt="">
+                        </a> | <a href="#" class="cart-item"><img src="../anh/Bag.png" alt="">
+                            <span class="cart-count">2</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <ul class="menu">
+                <li><a href="#" class="nav-item">TRANG CHỦ</a></li> 
+                <li><a href="#" class="nav-item">SẢN PHẨM</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">MENU <img src="../anh/ChevronDown1.png" alt=""></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../DanhMuc/index/traicay.html">Trái cây</a></li>
+                        <li><a href="../DanhMuc/index/rau.html">Rau củ</a></li>
+                        <li><a href="../DanhMuc/index/gao.html">Gạo</a></li>
+                        <li><a href="../DanhMuc/index/thit.html">Thịt</a></li>
+                        <li><a href="../DanhMuc/index/ca.html">Hải sản</a></li>
+                        <li><a href="#">Đồ uống</a></li>
+                        <li><a href="#">Mật ong</a></li>
+                        <li><a href="#">Gia vị</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-item">TIN TỨC & SỰ KIỆN</a></li>
+                
+            </ul>
+            <div class="navbar-icons">
+                <i><img src="../anh/PhoneCall2.png" alt=""></i>
+                <span>123456789</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="/index/TrangChu.html"><img src="../anh/home-1.png" alt=""></a>
+                <span >&gt;</span>
+                <a href="#" class="current-page">GIỎ HÀNG</a>
+                <span>&gt;</span>
+                <a href="/index/ThanhToan.html" class="current-page">THANH TOÁN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Payment Form -->
+                <div class="payment-form">
+                    <h2 class="form-title">THÔNG TIN THANH TOÁN</h2>
+                    <form id="checkoutForm">
+                        <div class="form-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">HỌ</label>
+                                    <input type="text" 
+                                    id="first-name"class="form-input"  placeholder="First name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">TÊN</label>
+                                    <input type="text"
+                                    id="last-name" class="form-input" placeholder="Last name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">TÊN LÓT</label>
+                                    <input type="text" 
+                                    id="middle-name" class="form-input" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">ĐỊA CHỈ NHÀ</label>
+                                <input type="text" id="address" class="form-input" placeholder="Địa chỉ nhà">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">TỈNH/THÀNH PHỐ</label>
+                                    <select id="province" class="form-select">
+                                        <option>-- Chọn thành phố --</option>
+                                        <option>Hà Nội</option>
+                                        <option>TP. Hồ Chí Minh</option>
+                                        <option>Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">QUỐC GIA</label>
+                                    <select id="countrySelect" class="form-select">
+                                        <option>-- Chọn quốc gia --</option>
+                                        <option>Việt Nam</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">QUẬN/HUYỆN</label>
+                                    <select id="district" class="form-select">
+                                        <option>-- Chọn Quận/Huyện --</option>
+                                        <option>Quận 1</option>
+                                        <option>Quận 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" id="email" class="form-input" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">SỐ ĐIỆN THOẠI</label>
+                                    <input type="tel" id="phone" class="form-input" placeholder="Phone number">
+                                </div>
+                                <div></div>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="saveInfo" class="checkbox">
+                                <label for="saveInfo"  id="agree-policy" class="checkbox-label">ĐỒNG Ý VỚI CHÍNH SÁCH CỦA CHÚNG TÔI</label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3 class="form-title">THÔNG TIN BỔ SUNG</h3>
+                            <div class="form-group">
+                                <label class="form-label">GHI CHÚ CHO NGƯỜI GIAO HÀNG DỄ TÌM BẠN HƠN</label>
+                                <textarea id="note" class="form-textarea" placeholder="Ghi chú cho người giao hàng..."></textarea>
+                            </div>
+                        </div>
+                </div>
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3 class="form-title">GIỎ HÀNG CỦA BẠN</h3>
+                    <ul id="cart-list"></ul>
+                    <br>
+                    <p>TỔNG TIỀN: <strong id="subtotal">...</strong> VNĐ</p>
+                    <hr>
+                    <p>PHÍ SHIP: <strong>Free</strong></p>
+                    <hr>
+                    <p>TỔNG ĐƠN HÀNG: <strong id="grandtotal">...</strong> VNĐ</p><br>
+                    
+                    <h3 class="form-title">HÌNH THỨC THANH TOÁN</h3>
+                    <div class="payment-method">
+                        <label><input type="radio" name="payment" /> CHUYỂN KHOẢN NGÂN HÀNG</label>
+                        <label><input type="radio" name="payment" /> MOMO</label>
+                        <label><input type="radio" name="payment" /> TIỀN MẶT</label>
+                    </div>
+                    <button onclick="thanhtoan1()" class="checkout-button">THANH TOÁN</button>
+                    <p id="result" style="color:red;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="/index/TrangChu.html">
+                        <img src="../anh/logo.png" alt="">
+                        NÔNG NGHIỆP SỐ
+                    </a>
+                </div>
+                <p>CHUYÊN CUNG CẤP RAU CỦ - TRÁI CÂY - THỊT TƯƠI <br> ĐƯỢC PHÁT TRIỂN VÀ TẠO: NÔNG NGHIỆP SỐ</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>TÀI KHOẢN</h3>
+                <p><strong>EMAIL:</strong><br>hello2345@gmail.com</p>
+                <p><strong>HOTLINE:</strong><br>123456789</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HỖ TRỢ</h3>
+                <p><a href="#">LIÊN HỆ</a></p>
+                <p><a href="#">CÂU HỎI THƯỜNG GẶP</a></p>
+                <p><a href="#">ĐIỀU KHOẢN & QUY ĐỊNH</a></p>
+                <p><a href="#">CHÍNH SÁCH BẢO MẬT</a></p>
+            </div>
+        
+        </div>
+    </footer>
+   
+</body>
+<script>
+    window.onload = function () {
+    fetch('../XuLy_php/info_thanhtoan.php')
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                const { fullname, email, phone_number } = data.data;
+
+                // Tách fullname thành họ, tên đệm, tên
+                const parts = fullname.trim().split(' ');
+                document.getElementById('first-name').value = parts[0] || '';
+                document.getElementById('middle-name').value = parts.slice(1, -1).join(' ') || '';
+                document.getElementById('last-name').value = parts.slice(-1)[0] || '';
+
+                document.getElementById('email').value = email || '';
+                document.getElementById('phone').value = phone_number || '';
+            } else {
+                console.error('Lỗi:', data.message);
+            }
+        })
+        .catch(err => {
+            console.error('Lỗi khi gọi API người dùng:', err);
+        });
+    };
+    // Lấy phần tử select
+    const provinceSelect = document.getElementById('province');
+    const districtSelect = document.getElementById('district');
+
+  // Load danh sách tỉnh/thành
+  fetch('https://provinces.open-api.vn/api/?depth=1')
+    .then(res => res.json())
+    .then(provinces => {
+      provinces.forEach(p => {
+        const option = document.createElement('option');
+        option.value = p.code;
+        option.textContent = p.name;
+        provinceSelect.appendChild(option);
+      });
+    });
+
+  // Khi chọn tỉnh, load quận/huyện
+    provinceSelect.addEventListener('change', function () {
+    const code = this.value;
+    fetch(`https://provinces.open-api.vn/api/p/${code}?depth=2`)
+      .then(res => res.json())
+      .then(data => {
+        districtSelect.innerHTML = '<option>Chọn quận/huyện</option>';
+        data.districts.forEach(d => {
+          const option = document.createElement('option');
+          option.value = d.code;
+          option.textContent = d.name;
+          districtSelect.appendChild(option);
+        });
+      });
+  });
+
+    //lấy thông tin khi thanh toán
+    function thanhtoan(){
+      const ho = document.getElementById('first-name').value;
+      const ten = document.getElementById('last-name').value;
+      const tendem = document.getElementById('middle-name').value;
+      const address=document.getElementById('address').value;
+      const district=document.getElementById('district').value;
+      const province=document.getElementById('province').value;
+      const countrySelect=document.getElementById('countrySelect').value;
+      const allStrong = document.querySelectorAll('.boxbill strong');
+      const name=ho+' '+tendem+' '+ten
+      const sdt = document.getElementById('phone').value;
+      const email1 = document.getElementById('email').value;
+      const addressFull=address+', '+district+', '+province+', '+countrySelect;
+      const note=document.getElementById('note').value;
+      const total_money=allStrong[2].innerText;
+      fetch('../XuLy_php/ThanhToanLuu.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          ten: name,
+          sdt: sdt,
+          email: email1,
+          adress: addressFull,
+          note: note,
+          total: total_money
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+          const resultEl = document.getElementById('result');
+          console.log('Phản hồi JSON:', data); 
+          if (data.status === 'success') {
+            resultEl.style.color = 'green';
+            resultEl.innerText = '🎉 Thanh Toán thành công!';
+            setTimeout(() => {
+              window.location.href = 'TrangChu.html'; // Chuyển hướng nếu cần
+            }, 1000);
+          } else {
+            resultEl.style.color = 'red';
+            resultEl.innerText = '❌ ' + data.message;
+          }
+        })
+        .catch(err => {
+          document.getElementById('result').innerText = 'Lỗi kết nối: ' + err;
+        });
+    }
+    function submitForm() {
+      const ho = document.getElementById('first-name').value;
+      const ten = document.getElementById('last-name').value;
+      const tendem = document.getElementById('middle-name').value;
+      const sdt = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+    
+      fetch('../XuLy_php/thanhtoan.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          ho: ho,
+          tendem: tendem,
+          ten: ten,
+          stdtk: sdt,
+          emaildk: email
+      })
+      })
+      .then(res => res.json())  
+      .then(response => {
+        const resultEl = document.getElementById('result');
+        console.log('Phản hồi:', response);
+        resultEl.style.color = 'green';
+        resultEl.innerText = response;
+    
+        if (response.includes("ghi nhận")) {
+          setTimeout(() => {
+            window.location.href = 'TrangChu.html';
+          }, 1000);
+        }else {
+          resultEl.style.color = 'red';
+          resultEl.innerText = '❌ ' + data.message;
+        }
+      })
+      .catch(err => {
+        document.getElementById('result').innerText = '❌ Lỗi kết nối: ' + err;
+      });
+    }
+     window.onload = function () {
+      const cartList = document.getElementById('cart-list');
+      const items = JSON.parse(localStorage.getItem('cart_items')) || [];
+      const total = localStorage.getItem('cart_total') || "0";
+
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>
+            <img src="../anh/${item.name.includes("XANH") ? "otchuongxanh.jpg" : "otchuongdo.jpg"}" />
+            ${item.name} x${item.quantity}
+          </span>
+          <span>${(item.price * item.quantity).toLocaleString('vi-VN')}</span>
+        `;
+        cartList.appendChild(li);
+      });
+
+      document.getElementById('subtotal').innerText = parseInt(total).toLocaleString('vi-VN');
+      document.getElementById('grandtotal').innerText = parseInt(total).toLocaleString('vi-VN');
+    };
+
+    function thanhtoan1() {
+      const payments = document.getElementsByName("payment");
+      let selected = null;
+      for (let p of payments) {
+        if (p.checked) {
+          selected = p.nextSibling.textContent.trim();
+          break;
+        }
+      }
+
+      if (!selected) {
+        document.getElementById("result").innerText = "Vui lòng chọn hình thức thanh toán!";
+        return;
+      }
+
+      document.getElementById("result").style.color = "green";
+      document.getElementById("result").innerText = "Đặt hàng thành công với phương thức: " + selected;
+
+      // Có thể xóa localStorage nếu cần:
+      // localStorage.removeItem("cart_items");
+      // localStorage.removeItem("cart_total");
+    }
+</script>
+    
+</html>

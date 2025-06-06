@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #c5f4c1;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+.top-bar {
+  background: #eee;
+  color: #666;
+  font-size: 14px;
+  padding: 0px 210px;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 40px;
+}
+
+.social-icons i {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.social-icons i.fa-facebook:hover {color: #0866ff;}
+.social-icons i.fa-twitter:hover {color: #3e84f5;}
+.social-icons i.fa-whatsapp:hover {color: #2b7a0b;}
+.social-icons i.fa-linkedin:hover {color: #0866ff;}
+
+/* Thanh menu */
+.header {
+  background-image: url('../anh/Vector.png');
+  box-shadow: 0 2px 5px rgba(0, 8, 255, 0.1);
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* Căn giữa nội dung trong menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: #135a00;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo a {
+  display: flex; /* Sắp xếp các phần tử theo hàng ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+  color: inherit; /* Giữ màu chữ gốc */
+}
+
+.logo img {
+  margin-right: 10px; /* Tạo khoảng cách giữa logo và chữ */
+}
+
+.name_logo {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.menu-search {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-left: 50px;
+
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu-search-input {
+  position: absolute;
+  width: 120px;
+  height: 36px;
+  border-radius: 4px;
+  padding: 5px;
+  display: none;
+}
+
+.menu-search:hover .menu-search-input {
+  display: block;
+}
+
+.menu-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Tạo khoảng cách giữa 2 icon */
+}
+
+.menu-cart {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-cart i {
+  font-size: 18px;
+  color: #333;
+}
+
+.hotline {
+  display: flex;
+  align-items: center;
+  background-color: #f2c66d;
+  padding: 15px 20px;
+  border-radius: 10px;
+  gap: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  max-width: 220px;
+}
+
+.hotline i {
+  font-size: 24px; /* Kích thước icon */
+}
+
+.hotline-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hotline-text span {
+  font-size: 14px;
+}
+
+.hotline-text strong {
+  font-size: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Cách đều các mục */
+  width: 40%; /* Tùy chỉnh theo ý muốn */
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(112, 107, 107); /* Màu chữ */
+  padding: 10px 15px; /* Thêm padding để dễ nhìn hơn */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #2b7a0b;
+}
+
+
+/* Bố cục chính */
+.container {
+  display: flex;
+  background: #c5f4c1;
+  height: 95vh; /* Chiếm toàn bộ chiều cao của viewport */
+  width: 99vw; /* Chiếm toàn bộ chiều rộng của viewport */
+}
+
+/* Phần đăng nhập */
+.login-section {
+  width: 50%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  text-align: center;
+}
+
+h1 {
+  color: #20201f;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 15px;
+  color: #151414;
+  margin-bottom: 30px;
+}
+
+.SDT {
+  text-align: left;
+  font-weight: bold;
+}
+
+.ten {
+  text-align: left;
+  font-weight: bold;
+}
+
+.email {
+  text-align: left;
+  font-weight: bold;
+}
+
+.password-container {
+  font-weight: bold;
+}
+
+/* Form đăng nhập */
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ô nhập */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background: transparent; /* Làm nền trong suốt */
+  outline: none; /* Bỏ viền mặc định khi focus */
+  color: black;
+}
+
+/* Căn chỉnh mật khẩu & quên mật khẩu ngang hàng */
+.password-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.password-container a {
+  color: #2b14d8;
+  text-decoration: none;
+}
+
+.password-container a:hover {
+  text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+button {
+  background: #2b7a0b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Đăng ký */
+.signup {
+  font-size: 14px;
+  cursor: pointer;
+  width: 60%;
+  text-align: center;
+}
+
+.signup a {
+  color: #0f4788;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Đăng nhập bằng mạng xã hội */
+.social-login {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+
+.google {
+  background: none;
+  color: #000;
+  border: 5px solid #ccc;
+}
+.google:hover {
+  background: #ffffff;
+}
+.apple {
+  background: none;
+  border-radius: 5px;
+  color: #000;
+}
+.apple:hover {
+  background: #ffffff;
+}
+
+/* Phần thông tin bên phải */
+.info-section {
+  width: 50%;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.info-section h1 {
+  font-size: 36px;
+  color: #2D5F4D;
+  margin-top: 80px;
+}
+
+/* Hình ảnh */
+.info-section img {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 90px;
+}
+
+.options {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 5px; /* Tạo khoảng cách nhỏ giữa checkbox và nhãn */
+}
+
+.options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 13px;
+}
+  /* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #d4edda;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  list-style-type: none;
+  z-index: 1000;
+  min-width: 150px;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  padding: 10px 2px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #d4edda;
+  border-radius: 10px;
+}
+
+/* Hiển thị menu khi rê chuột */
+.dropdown:hover .dropdown-menu {
+  display: block;
+
+}
+
+
+
+.home {
+position: relative;
+text-decoration: none;
+color: #797979;
+padding: 10px;
+transition: color 0.3s ease;
+font-style: 20px;
+}
+
+/* Hiệu ứng sóng dưới chữ */
+.home::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  background: url('../anh/Vector2.png') no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.home:hover {
+  font-weight: bold;
+  color: #2d5f4d;
+  text-decoration: none;
+}
+
+/* Khi rê chuột vào: hiện hiệu ứng */
+.home:hover::after {
+  opacity: 1;
+}

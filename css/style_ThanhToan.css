@@ -1,0 +1,1187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  color: #002603;
+}
+
+.header-top {
+  background-color: #333;
+  padding: 8px 0;
+  font-size: 12px;
+  height: 42px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.header-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #b3b3b3;
+}
+
+.header-top-content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-main {
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 302px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #002603;
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+
+.search-bar {
+  width: 498px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  width: 400px;
+  height: 100%;
+  padding: 12px 18px 12px 42px;
+  border: none;
+  outline: none;
+  background: url('../anh/Search1.png') no-repeat 14px center;
+  background-size: 20px 20px;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.search-btn {
+  height: 100%;
+  padding: 0 20px;
+  background-color: #00b207;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-item {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  background-color: #e74c3c;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #333333;
+  color: #666666;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  font-size: 16px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.menu li {
+  position: relative;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #666666;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+.menu a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-size: 16px;
+}
+
+.navbar-icons span:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown-toggle {
+  display: block;
+  padding: 15px 20px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.dropdown-toggle:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #d4edda;
+  border: 1px solid #ccc;
+  padding: 12px 5px;
+  list-style-type: none;
+  z-index: 1000;
+  min-width: 150px;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #c8e6c9;
+  border-radius: 10px;
+}
+
+.dropdown-menu li a {
+  color: #666666;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-image: url('../anh/nenthanhhome.jpg');
+  padding: 30px 0;
+  color: white;
+  height: 80px;
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.main-content {
+  padding: 50px 0;
+  background: white;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+}
+
+.breadcrumb a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.breadcrumb a.current-page {
+  color: #00b207;
+  font-weight: normal;
+  cursor: default;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.breadcrumb a.current-page:hover {
+  color: white;
+  font-weight: bold;
+}
+
+/* Payment Form */
+.payment-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 10px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: #27ae60;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox {
+  margin-top: 3px;
+}
+
+.checkbox-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Cart Summary */
+.cart-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+.cart-summary {
+  width: 424px;
+}
+
+.cart-summary ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.cart-summary span {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.cart-summary li {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.cart-summary img {
+  /* padding-right: 15px; */
+  height: 50px;
+  width: 50px;
+}
+
+.cart-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 15px;
+}
+
+.cart-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 10px;
+}
+
+.cart-item-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-size: 14px;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.total-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.total-final {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid #27ae60;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin: 30px 0;
+}
+
+.payment-method {
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.payment-method label:hover {
+  color: #00b207;
+}
+        
+.payment-method.active {
+  border-color: #27ae60;
+}
+
+.payment-radio {
+  accent-color: #27ae60;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.checkout-button {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 25px;
+}
+.checkout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  margin-top: 50px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* padding: 0px 300px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 50% 25% 25%; /* tăng độ rộng cho .footer-brand */
+  gap: 15px;
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 50px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
+.footer .logo a {
+  color: white;
+}
+
+.footer-brand p {
+  color: #808080;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer-section h3 {
+  color: #00B207;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  color: #bdc3c7;
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #bdc3c7;
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  color: #27ae60;
+  transition: color 0.3s ease;
+}
+
+.footer-section strong {
+  color: white;
+  font-weight: bold;
+}
+
+.decoration-numbers {
+  position: absolute;
+  font-size: 120px;
+  font-weight: bold;
+  color: rgba(76, 175, 80, 0.1);
+  z-index: 1;
+}
+
+.number-left {
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.number-right {
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===========================================
+   RESPONSIVE CSS CHO iPHONE 13 VÀ iPAD MINI
+   ========================================== */
+
+/* iPad Mini (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Container chính */
+    .container {
+        max-width: 90%;
+        padding: 0 15px;
+    }
+
+    /* Header adjustments */
+    .header-top {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .header-top-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .logo {
+        width: auto;
+        font-size: 24px;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .cart-info {
+        gap: 15px;
+    }
+
+    /* Navigation */
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .dropdown-menu {
+        min-width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Main content - Thay đổi thứ tự cho iPad */
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-form {
+        order: 1; /* Payment Form hiển thị trước */
+    }
+
+    .cart-summary {
+        width: 100%;
+        order: 2; /* Cart Summary hiển thị sau */
+    }
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .decoration-numbers {
+        display: none;
+    }
+}
+
+/* iPhone 13 và các thiết bị nhỏ hơn (320px - 767px) */
+@media screen and (max-width: 767px) {
+    /* Base styles */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Header mobile */
+    .header-top {
+        height: auto;
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    .header-top-content {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .header-main {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .logo {
+        width: auto;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: none;
+        height: 40px;
+    }
+
+    .search-input {
+        padding: 10px 15px 10px 35px;
+        font-size: 13px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    .cart-info {
+        gap: 10px;
+    }
+
+    /* Navigation mobile */
+    .navbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid #444;
+        padding: 8px 0;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        padding: 8px 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: #444;
+        border: none;
+        border-radius: 0;
+        min-width: 100%;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-icons {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    /* Breadcrumb mobile */
+    .breadcrumb {
+        padding: 15px 0;
+        height: auto;
+    }
+
+    .breadcrumb-content {
+        font-size: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Main content mobile - Thay đổi thứ tự */
+    .main-content {
+        padding: 20px 0;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-form {
+        order: 1; /* Payment Form hiển thị trước trên mobile */
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .cart-summary {
+        order: 2; /* Cart Summary hiển thị sau trên mobile */
+        width: 100%;
+    }
+
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .cart-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    /* Form responsive */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .form-label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .checkbox-group {
+        margin-bottom: 10px;
+    }
+
+    .checkbox-label {
+        font-size: 11px;
+    }
+
+    /* Cart summary mobile */
+    .cart-summary {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .cart-summary ul {
+        margin-bottom: 15px;
+    }
+
+    .cart-summary li {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .cart-summary img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .cart-summary p {
+        font-size: 13px;
+        margin-block: 10px;
+    }
+
+    /* Payment methods mobile */
+    .payment-method {
+        margin-bottom: 10px;
+    }
+
+    .payment-method label {
+        font-size: 13px;
+        padding: 8px 0;
+        display: block;
+    }
+
+    /* Buttons mobile */
+    .checkout-button,
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    /* Footer mobile */
+    .footer {
+        height: auto;
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        order: 1;
+    }
+
+    .footer-section {
+        order: 2;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .footer .logo {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .decoration-numbers {
+        display: none;
+    }
+
+    /* Utility classes for mobile */
+    .mobile-hide {
+        display: none !important;
+    }
+
+    .mobile-show {
+        display: block !important;
+    }
+
+    .mobile-center {
+        text-align: center !important;
+    }
+}
+
+/* iPhone 13 specific (390px width) */
+@media screen and (max-width: 390px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .form-title,
+    .cart-title {
+        font-size: 16px;
+    }
+
+    .payment-form,
+    .cart-summary {
+        padding: 12px;
+    }
+
+    .form-input,
+    .form-select {
+        padding: 8px 10px;
+    }
+
+    .checkout-button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation cho mobile - Giữ nguyên thứ tự Payment Form trước */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 40%;
+        min-width: 200px;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        display: grid;
+    }
+
+    .payment-form {
+        order: 1; /* Payment Form ở cột 1 */
+        grid-column: 1;
+    }
+
+    .cart-summary {
+        order: 2; /* Cart Summary ở cột 2 */
+        grid-column: 2;
+    }
+}
+
+/* Hover states cho touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .menu a:hover,
+    .footer-section a:hover,
+    .breadcrumb a:hover {
+        color: inherit;
+        font-weight: normal;
+    }
+
+    .menu a:active,
+    .footer-section a:active,
+    .breadcrumb a:active {
+        color: #00b207;
+        font-weight: bold;
+    }
+
+    .checkout-button:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .checkout-button:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Accessibility improvements cho mobile */
+@media screen and (max-width: 767px) {
+    /* Tăng kích thước vùng nhấn */
+    .menu a,
+    .cart-item,
+    .checkout-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Cải thiện contrast */
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+        border-color: #00b207;
+        box-shadow: 0 0 0 2px rgba(0, 178, 7, 0.2);
+    }
+
+    /* Scroll smooth */
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .navbar,
+    .breadcrumb,
+    .footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 0;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-form,
+    .cart-summary {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

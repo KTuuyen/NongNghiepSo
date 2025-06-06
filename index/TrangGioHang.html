@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Giỏ Hàng - Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="../css/StyleGioHang.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?fami  ly=Roboto:wght@300;400;700&display=swap"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="main-header">
+        <img src="anh/logo.png" alt="Logo" />
+        <a href="TrangChu.html" class="logo">CÔNG NGHIỆP SỐ</a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm" class="search-bar" />
+        <button class="search-button">Search</button>
+      </div>
+
+      <div class="user-options">
+        <a href="/index/DSHang.html" class="icon-heart"
+          ><img src="anh/R.png" alt=""
+        /></a>
+        <a href="/index/ThanhToan.html" class="icon-cart">
+          │ 🛒
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+    <nav class="menu">
+      <a href="trangchu.html">TRANG CHỦ ⏷</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">MENU ⏷</a>
+        <ul class="dropdown-menu">
+          <li><a href="../DanhMuc/index/traicay.html">Trái cây</a></li>
+          <li><a href="../DanhMuc/index/rau.html">Rau củ</a></li>
+          <li><a href="../DanhMuc/index/gao.html">Gạo</a></li>
+          <li><a href="../DanhMuc/index/thit.html">Thịt</a></li>
+          <li><a href="../DanhMuc/index/ca.html">Hải sản</a></li>
+          <li><a href="#">Đồ uống</a></li>
+          <li><a href="#">Mật ong</a></li>
+          <li><a href="#">Gia vị</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">SẢN PHẨM ⏷</a>
+        <ul class="dropdown-menu">
+          <li><a href="/DanhMucTraiCay/traicay.html">Trái cây</a></li>
+          <li><a href="/DanhMucRau/DanhMucRau/rau.html">Rau củ</a></li>
+          <li><a href="/DanhMucGao/danhmucgao/gao.html">Gạo</a></li>
+          <li><a href="#">Nông sản khô</a></li>
+          <li><a href="/DanhMucCa/ca.html">Hải sản</a></li>
+          <li><a href="#">Đồ uống</a></li>
+          <li><a href="#">Mật ong</a></li>
+          <li><a href="#">Gia vị</a></li>
+        </ul>
+      </div>
+      <a href="#">TIN TỨC & SỰ KIỆN ⏷</a>
+    </nav>
+
+    <nav class="home">
+      <a href="#"><i class="fas fa-home"></i> 〉</a>
+
+      <a href="">GIỎ HÀNG 〉</a>
+    </nav>
+
+    <div class="container">
+      <h2>GIỎ HÀNG</h2>
+      <table class="cart">
+        <thead>
+          <tr>
+            <th>SẢN PHẨM</th>
+            <th>GIÁ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="anh/nhoxanh.jpg" alt="Nho xanh" class="product-img" />
+              NHO XANH
+            </td>
+            <td>12.000 VNĐ/KG</td>
+            <td class="quantity-box">
+              <button class="qty-btn">-</button>
+              <span class="qty-number">1</span>
+
+              <button class="qty-btn">+</button>
+            </td>
+            <td><button class="green-btn">CHỌN</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="anh/gaost25.jpg" alt="Gạo" class="product-img" /> GẠO
+              THƠM NEPTUNE ST25 EXTRA 5KG
+            </td>
+            <td>190.000 VNĐ</td>
+            <td class="quantity-box">
+              <button class="qty-btn">-</button>
+              <span class="qty-number">1</span>
+
+              <button class="qty-btn">+</button>
+            </td>
+            <td><button class="green-btn">CHỌN</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="anh/cai.jfif" alt="Cải bắp" class="product-img" /> CẢI
+              BẮP
+            </td>
+            <td>45.000 VNĐ/KG</td>
+            <td class="quantity-box">
+              <button class="qty-btn">-</button>
+              <span class="qty-number">1</span>
+
+              <button class="qty-btn">+</button>
+            </td>
+            <td><button class="green-btn">CHỌN</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="anh/otchuongxanh.jpg"
+                alt="Ớt chuông"
+                class="product-img"
+              />
+              ỚT CHUÔNG
+            </td>
+            <td>14.999 VNĐ/KG</td>
+            <td class="quantity-box">
+              <button class="qty-btn">-</button>
+              <span class="qty-number">1</span>
+
+              <button class="qty-btn">+</button>
+            </td>
+            <td><button class="green-btn">CHỌN</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="anh/xoai.jfif" alt="Xoài" class="product-img" /> XOÀI
+              LONG AN
+            </td>
+            <td>18.999 VNĐ/KG</td>
+            <td class="quantity-box">
+              <button class="qty-btn">-</button>
+              <span class="qty-number">1</span>
+
+              <button class="qty-btn">+</button>
+            </td>
+            <td><button class="green-btn">CHỌN</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="voucher-container">
+        <div class="voucher">
+          <div class="voo">
+            <img src="/anh/voucher_cropped.png" alt="Voucher Icon" />VOUCHER
+          </div>
+          <span class="enter-text">CHỌN HOẶC NHẬP MÃ</span>
+          <span class="arrow">›</span>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <label><input type="checkbox" /> TẤT CẢ</label>
+
+        <button class="total-btn">TỔNG CỘNG: 0 VNĐ</button>
+        <a href="/index/ThanhToan.html">
+          <button class="pay-btn">THANH TOÁN</button></a
+        >
+      </div>
+    </div>
+       <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/06/06/12/20250606121821-M0W1S99R.js"></script>
+    
+  </body>
+</html>

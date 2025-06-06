@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Thanh Toán - Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="/NguoiBan/css/style_QuanLySanPham.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="main-header">
+        <img src="/anh/logo.png" alt="Logo" />
+        <a href="/index/TrangChu.html" class="logo">NÔNG NGHIỆP SỐ</a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm" class="search-bar" />
+        <button class="search-button">Search</button>
+      </div>
+
+      <div class="user-options">
+        <a href="/nongnghiepso/index/DSHang.html" class="icon-heart"
+          ><img src="/anh/Heart1.png" alt=""
+        /></a>
+        <a href="/TrangGioHang/TrangGioHang.html" class="icon-heart">
+          │ <img src="/anh/Bag.png" alt="">
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+
+    <nav class="menu">
+      <a href="/index/TrangChu.html">TRANG CHỦ ⏷</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">MENU ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="/DanhMucCa/ca.html">Cá & Hải Sản</a></li>
+          <li><a href="/DanhMucThit/thit.html">Thịt</a></li>
+          <li><a href="/DanhMucRau/DanhMucRau/rau.html">Rau, Củ</a></li>
+          <li><a href="/DanhMucTraiCay/traicay.html">Trái cây</a></li>
+          <li><a href="/DanhMucGao/danhmucgao/gao.html">Gạo</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">SẢN PHẨM ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="/DanhMucTraiCay/traicay.html">Trái cây</a></li>
+          <li><a href="/DanhMucRau/DanhMucRau/rau.html">Rau củ</a></li>
+          <li><a href="/DanhMucGao/danhmucgao/gao.html">Gạo</a></li>
+          <li><a href="#">Nông sản khô</a></li>
+          <li><a href="/DanhMucCa/ca.html">Hải sản</a></li>
+          <li><a href="#">Đồ uống</a></li>
+          <li><a href="#">Mật ong</a></li>
+          <li><a href="#">Gia vị</a></li>
+        </ul>
+      </div>
+      <a href="#">TIN TỨC & SỰ KIỆN ⏷</a>
+    </nav>
+
+    <div class="home">
+      <a href="#"><i class="fas fa-home"></i> 〉</a>
+
+      <a href="">QUẢN LÝ SẢN PHẨM 〉</a>
+
+      <a href="#" style="color: #00B207;">THÊM SẢN PHẨM</a>
+    </div>
+
+    <div class="noidung">
+      <div class="container">
+        <div class="sidebar">
+          <h4>Quản Lý Đơn Hàng</h4>
+          <ul>
+            <li class="active">Tất cả</li>
+            <li>Bàn giao đơn hàng</li>
+            <li>Cài đặt vận chuyển</li>
+          </ul>
+          <h4>Quản Lý Sản Phẩm</h4>
+          <ul>
+            <li>Sản phẩm</li>
+            <li style="color: rgb(41, 210, 41)">Thêm sản phẩm</li>
+          </ul>
+          <h4>Quản Lý Chăm Sóc KH</h4>
+          <ul>
+            <li>Chat</li>
+            <li>Đánh giá</li>
+          </ul>
+          <h4>Quản Lý Tài Chính</h4>
+          <ul>
+            <li>Doanh thu</li>
+            <li>Số dư trong CNS</li>
+            <li>Tài khoản ngân hàng</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ĐÃ DI CHUYỂN product-container VÀO TRONG .noidung -->
+      <div class="product-container">
+        <h2 class="title">THÔNG TIN SẢN PHẨM</h2>
+
+        <div class="form-box">
+          <h3 class="section-title">Thông Tin Cơ Bản</h3>
+
+          <div class="media-section">
+            <div class="media-box">
+              <label>Hình ảnh sản phẩm</label>
+              <div class="upload-placeholder">Thêm hình ảnh<br />tỉ lệ 1:1</div>
+            </div>
+
+            <div class="media-box">
+              <label>Video sản phẩm</label>
+              <div class="upload-placeholder">Thêm video</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="product-name">Tên sản phẩm</label>
+              <input
+                type="text"
+                id="product-name"
+                placeholder="Nhập tên sản phẩm"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nganhang">Tài khoản ngân hàng</label>
+              <select id="nganhang">
+                <option value="">Chọn ngân hàng</option>
+                <option value="mb">Mbank</option>
+                <option value="tech">Techcombank</option>
+                <option value="vcb">VCB</option>
+                <option value="ocb">OCB</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-rw">
+            <label for="product-desc">Mô tả sản phẩm</label>
+            <textarea id="product-desc" placeholder="Nhập mô tả"></textarea>
+          </div>
+        </div>
+        <div class="button-rw">
+          <button class="cancel">HỦY</button>
+          <button class="save">LƯU SẢN PHẨM</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footerleft">
+          <div class="logo">
+            <img src="../anh/logo.png" alt="Logo" />
+            <a href="#" class="logo">CÔNG NGHIỆP SỐ</a>
+          </div>
+          <p>CHUYÊN CUNG CẤP RAU CỦ-TRÁI CÂY-THỊT TƯƠI</p>
+          <p>ĐƯỢC PHÁT TRIỂN VÀ TẠO: NÔNG NGHIỆP SỐ</p>
+        </div>
+        <div class="tk">
+          <h4>TÀI KHOẢN</h4>
+          <h4>EMAIL</h4>
+          <p>hello12345@gmail.com</p>
+          <h4>HOTLINE</h4>
+          <p>23456789</p>
+        </div>
+        <div class="ht">
+          <h4>HỖ TRỢ</h4>
+          <p>LIÊN HỆ</p>
+          <p>CÂU HỎI THƯỜNG GẶP</p>
+          <p>ĐIỀU KHOẢN & QUY ĐỊNH</p>
+          <p>CHÍNH SÁCH BẢO MẬT</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Thanh Toán - Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="/NguoiBan/css/style_DoanhThu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="main-header">
+        <img src="../anh/logo.png" alt="Logo" />
+        <a href="/index/TrangChu.html" class="logo">NÔNG NGHIỆP SỐ</a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm" class="search-bar" />
+        <button class="search-button">Search</button>
+      </div>
+
+      <div class="user-options">
+        <a href="index.html" class="icon-heart"
+          ><img src="../anh/R.png" alt=""
+        /></a>
+        <a href="#" class="icon-cart">
+          │ 🛒
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+    <nav class="menu">
+      <a href="/index/TrangChu.html">TRANG CHỦ ⏷</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">MENU ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="/DanhMucCa/ca.html">Cá & Hải Sản</a></li>
+          <li><a href="/DanhMucThit/thit.html">Thịt</a></li>
+          <li><a href="/DanhMucRau/DanhMucRau/rau.html">Rau, Củ</a></li>
+          <li><a href="/DanhMucTraiCay/traicay.html">Trái cây</a></li>
+          <li><a href="/DanhMucGao/danhmucgao/gao.html">Gạo</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">SẢN PHẨM ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="/DanhMucTraiCay/traicay.html">Trái cây</a></li>
+          <li><a href="/DanhMucRau/DanhMucRau/rau.html">Rau củ</a></li>
+          <li><a href="/DanhMucGao/danhmucgao/gao.html">Gạo</a></li>
+          <li><a href="#">Nông sản khô</a></li>
+          <li><a href="/DanhMucCa/ca.html">Hải sản</a></li>
+          <li><a href="#">Đồ uống</a></li>
+          <li><a href="#">Mật ong</a></li>
+          <li><a href="#">Gia vị</a></li>
+        </ul>
+      </div>
+      <a href="/index/TrangChu.html">TIN TỨC & SỰ KIỆN ⏷</a>
+    </nav>
+
+    <nav class="home">
+      <a href="/index/TrangChu.html"><i class="fas fa-home"></i> 〉</a>
+
+      <a href="#">GIỎ HÀNG 〉</a>
+
+      <a href="#">THANH TOÁN</a>
+    </nav>
+    <div class="main">
+      <div class="sidebar">
+        <p>Quản Lý Đơn Hàng</p>
+        <ul>
+          <li>Tất cả</li>
+          <li>Bàn giao đơn hàng</li>
+          <li>Cài đặt vận chuyển</li>
+        </ul>
+        <p>Quản Lý Sản Phẩm</p>
+        <ul>
+          <li>Sản phẩm</li>
+          <li>Thêm sản phẩm</li>
+        </ul>
+        <p>Quản Lý Chăm Sóc KH</p>
+        <ul>
+          <li>Chat</li>
+          <li>Đánh giá</li>
+        </ul>
+        <p>Quản Lý Tài Chính</p>
+        <ul>
+          <li class="active">Doanh thu</li>
+          <li>Số dư trong CNS</li>
+          <li>Tài khoản ngân hàng</li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Doanh Thu</h2>
+        <div class="dashboard">
+          <div class="box">
+            <h3>TỔNG QUAN</h3>
+            <div class="row">
+              <span>Chưa thanh toán</span>
+              <div>
+                <span class="label">Tổng:</span>
+                <input type="text" value="99.000.000 đ" readonly />
+              </div>
+            </div>
+            <div class="row">
+              <span>Đã thanh toán</span>
+              <div>
+                <span class="label">Tổng:</span>
+                <input type="text" value="50.000.000 đ" readonly />
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <h3 style="color: #6fa46f">Báo cáo thu nhập</h3>
+            <div class="filter-row">
+              <label for="month">Doanh thu của</label>
+              <div class="filter-select-group">
+                <select id="month">
+                  <option value="">Tháng</option>
+                  <option value="">Tháng 1</option>
+                  <option value="">Tháng 2</option>
+                  <option value="">Tháng 3</option>
+                  <option value="">Tháng 4</option>
+                  <option value="">Tháng 5</option>
+                  <option value="">Tháng 6</option>
+                  <option value="">Tháng 7</option>
+                  <option value="">Tháng 8</option>
+                  <option value="">Tháng 9</option>
+                  <option value="">Tháng 10</option>
+                  <option value="">Tháng 11</option>
+                  <option value="">Tháng 12</option>
+                </select>
+                <select id="year">
+                  <option value="">Năm</option>
+                  <option value="">Năm 2020</option>
+                  <option value="">Năm 2021</option>
+                  <option value="">Năm 2022</option>
+                  <option value="">Năm 2023</option>
+                  <option value="">Năm 2024</option>
+                  <option value="">Năm 2025</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row2">
+              <span class="label">Tổng:</span>
+              <input type="text" value="0đ" readonly />
+            </div>
+            <div class="search-bar">
+              <label>Tìm kiếm:</label>
+              <input type="text" placeholder="dd/mm/yyyy" />
+              <button>🔍</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-section">
+          <button class="detail-btn">CHI TIẾT CÁC ĐƠN HÀNG</button>
+          <table>
+            <thead>
+              <tr>
+                <th>Đơn hàng</th>
+                <th>Trạng thái</th>
+                <th>Phương thức thanh toán</th>
+                <th>Số tiền</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footerleft">
+          <div class="logo">
+            <img src="../anh/logo.png" alt="Logo" />
+            <a href="#" class="logo">CÔNG NGHIỆP SỐ</a>
+          </div>
+          <p>CHUYÊN CUNG CẤP RAU CỦ-TRÁI CÂY-THỊT TƯƠI</p>
+          <p>ĐƯỢC PHÁT TRIỂN VÀ TẠO: NÔNG NGHIỆP SỐ</p>
+        </div>
+        <div class="tk">
+          <h4>TÀI KHOẢN</h4>
+          <h4>EMAIL</h4>
+          <p>hello12345@gmail.com</p>
+          <h4>HOTLINE</h4>
+          <p>23456789</p>
+        </div>
+        <div class="ht">
+          <h4>HỖ TRỢ</h4>
+          <p>LIÊN HỆ</p>
+          <p>CÂU HỎI THƯỜNG GẶP</p>
+          <p>ĐIỀU KHOẢN & QUY ĐỊNH</p>
+          <p>CHÍNH SÁCH BẢO MẬT</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

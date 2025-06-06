@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.product span {
+    margin-right: 10px;
+}
+
+.quantity {
+    width: 40px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.checkout-button {
+    margin-top: 20px;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 96%;
+    height: 500px;
+    padding: 20px;
+}
+
+.hero-title {
+    position: absolute;
+    width: 350px;
+    text-align: left;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-size: 55px;
+    font-style: italic;
+}
+
+.filled {
+    color: white;
+    font-size: 55px;
+    font-style: italic;
+    margin-top: -60px;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 290px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.image img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
