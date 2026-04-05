@@ -26,7 +26,7 @@
 
 🗂️ Cấu trúc thư mục chính
 CNPM_TEST/
-├── index/                   # Trang giao diện người dùng
+├── index/      # Trang giao diện người dùng
 │   ├── TrangChu.html
 │   ├── DangNhap.html
 │   ├── DangKy.html
@@ -34,7 +34,7 @@ CNPM_TEST/
 │   ├── DSHang.html
 │   └── TrangGioHang.html
 │
-├── NguoiBan/                # Giao diện & xử lý người bán
+├── NguoiBan/    # Giao diện & xử lý người bán
 │   ├── index/
 │   │   ├── DoanhThu.html
 │   │   ├── QuanLyDonHang.html
@@ -42,17 +42,17 @@ CNPM_TEST/
 │   └── css/
 │       └── (style files)
 │
-├── css/                     # File CSS chia theo từng trang
-├── images/                 # Hình ảnh sản phẩm
-├── XuLy_php/               # Các file PHP xử lý logic
+├── css/     # File CSS chia theo từng trang
+├── images/    # Hình ảnh sản phẩm
+├── XuLy_php/     # Các file PHP xử lý logic
 │   ├── connect.php
 │   ├── dangnhap.php
 │   ├── dangky.php
 │   ├── thanhToanLuu.php
 │   └── info_thanhToan.php
 │
-├── test/                   # Thư mục kiểm tra chức năng
-├── Web Bán Hàng.sql        # Cơ sở dữ liệu
+├── test/     # Thư mục kiểm tra chức năng
+├── Web Bán Hàng.sql  # Cơ sở dữ liệu
 └── README.md
 🛠️ Cài đặt & chạy dự án (local)
 1. Clone hoặc tải về mã nguồn
