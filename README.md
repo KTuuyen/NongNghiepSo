@@ -25,6 +25,7 @@
 - 📁 Phân chia cấu trúc rõ ràng: người dùng, người bán, xử lý PHP riêng
 
 🗂️ Cấu trúc thư mục chính
+```text
 CNPM_TEST/
 ├── index/      # Trang giao diện người dùng
 │   ├── TrangChu.html
@@ -54,6 +55,7 @@ CNPM_TEST/
 ├── test/     # Thư mục kiểm tra chức năng
 ├── Web Bán Hàng.sql  # Cơ sở dữ liệu
 └── README.md
+```
 🛠️ Cài đặt & chạy dự án (local)
 1. Clone hoặc tải về mã nguồn
 2. Copy vào thư mục www (nếu dùng Wampserver64)
